@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/widget_bg"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="4dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="РЫНКИ"
+            android:textColor="#99FFFFFF"
+            android:textSize="9sp"
+            android:letterSpacing="0.1"
+            android:fontFamily="monospace" />
+        <TextView
+            android:id="@+id/tv_updated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="—"
+            android:textColor="#55FFFFFF"
+            android:textSize="9sp"
+            android:fontFamily="monospace" />
+    </LinearLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="1dp"
+        android:background="#22FFFFFF" android:layout_marginBottom="2dp"/>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
+        <TextView android:id="@+id/sym_0" android:layout_width="52dp" android:layout_height="wrap_content"
+            android:text="BTC" android:textColor="#F7931A" android:textSize="11sp" android:textStyle="bold" android:fontFamily="monospace"/>
+        <TextView android:id="@+id/price_0" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="—" android:textColor="#EEEEEE" android:textSize="11sp"
+            android:fontFamily="monospace" android:gravity="end"/>
+        <TextView android:id="@+id/change_0" android:layout_width="58dp" android:layout_height="wrap_content"
+            android:text="" android:textColor="#99FFFFFF" android:textSize="10sp" android:fontFamily="monospace" android:gravity="end"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
+        <TextView android:id="@+id/sym_1" android:layout_width="52dp" android:layout_height="wrap_content"
+            android:text="ETH" android:textColor="#627EEA" android:textSize="11sp" android:textStyle="bold" android:fontFamily="monospace"/>
+        <TextView android:id="@+id/price_1" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="—" android:textColor="#EEEEEE" android:textSize="11sp"
+            android:fontFamily="monospace" android:gravity="end"/>
+        <TextView android:id="@+id/change_1" android:layout_width="58dp" android:layout_height="wrap_content"
+            android:text="" android:textColor="#99FFFFFF" android:textSize="10sp" android:fontFamily="monospace" android:gravity="end"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
+        <TextView android:id="@+id/sym_2" android:layout_width="52dp" android:layout_height="wrap_content"
+            android:text="SOL" android:textColor="#9945FF" android:textSize="11sp" android:textStyle="bold" android:fontFamily="monospace"/>
+        <TextView android:id="@+id/price_2" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="—" android:textColor="#EEEEEE" android:textSize="11sp"
+            android:fontFamily="monospace" android:gravity="end"/>
+        <TextView android:id="@+id/change_2" android:layout_width="58dp" android:layout_height="wrap_content"
+            android:text="" android:textColor="#99FFFFFF" android:textSize="10sp" android:fontFamily="monospace" android:gravity="end"/>
+    </LinearLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="1dp"
+        android:background="#22FFFFFF" android:layout_marginTop="1dp" android:layout_marginBottom="1dp"/>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
+        <TextView android:id="@+id/sym_3" android:layout_width="52dp" android:layout_height="wrap_content"
+            android:text="BRENT" android:textColor="#2ecc71" android:textSize="10sp" android:textStyle="bold" android:fontFamily="monospace"/>
+        <TextView android:id="@+id/price_3" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="—" android:textColor="#EEEEEE" android:textSize="11sp"
+            android:fontFamily="monospace" android:gravity="end"/>
+        <TextView android:id="@+id/change_3" android:layout_width="58dp" android:layout_height="wrap_content"
+            android:text="" android:textColor="#99FFFFFF" android:textSize="10sp" android:fontFamily="monospace" android:gravity="end"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
+        <TextView android:id="@+id/sym_4" android:layout_width="52dp" android:layout_height="wrap_content"
+            android:text="XAU" android:textColor="#FFD700" android:textSize="11sp" android:textStyle="bold" android:fontFamily="monospace"/>
+        <TextView android:id="@+id/price_4" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="—" android:textColor="#EEEEEE" android:textSize="11sp"
+            android:fontFamily="monospace" android:gravity="end"/>
+        <TextView android:id="@+id/change_4" android:layout_width="58dp" android:layout_height="wrap_content"
+            android:text="" android:textColor="#99FFFFFF" android:textSize="10sp" android:fontFamily="monospace" android:gravity="end"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
+        <TextView android:id="@+id/sym_5" android:layout_width="52dp" android:layout_height="wrap_content"
+            android:text="USD/₽" android:textColor="#4fa3ff" android:textSize="11sp" android:textStyle="bold" android:fontFamily="monospace"/>
+        <TextView android:id="@+id/price_5" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="—" android:textColor="#EEEEEE" android:textSize="11sp"
+            android:fontFamily="monospace" android:gravity="end"/>
+        <TextView android:id="@+id/change_5" android:layout_width="58dp" android:layout_height="wrap_content"
+            android:text="" android:textColor="#99FFFFFF" android:textSize="10sp" android:fontFamily="monospace" android:gravity="end"/>
+    </LinearLayout>
+
+</LinearLayout>

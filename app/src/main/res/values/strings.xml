@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Рынки</string>
+    <string name="widget_name">Рынки — котировки</string>
+    <string name="widget_desc">Крипто, нефть, золото, USD/RUB</string>
+</resources>
