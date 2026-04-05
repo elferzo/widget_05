@@ -26,9 +26,8 @@ jobs:
 
       - name: Generate keystore
         run: |
-          mkdir -p MW3
           keytool -genkeypair -v \
-            -keystore MW3/keystore.jks \
+            -keystore keystore.jks \
             -alias marketwidget \
             -keyalg RSA \
             -keysize 2048 \
@@ -36,11 +35,11 @@ jobs:
             -storepass market123 \
             -keypass market123 \
             -dname "CN=MarketWidget, OU=App, O=Market, L=Moscow, ST=Moscow, C=RU"
+
       - name: Build Signed APK
         run: |
-          cd MW3
           gradle assembleRelease \
-            -Pandroid.injected.signing.store.file=$GITHUB_WORKSPACE/MW3/keystore.jks \
+            -Pandroid.injected.signing.store.file=$GITHUB_WORKSPACE/keystore.jks \
             -Pandroid.injected.signing.store.password=market123 \
             -Pandroid.injected.signing.key.alias=marketwidget \
             -Pandroid.injected.signing.key.password=market123
@@ -49,4 +48,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: MarketWidget-release
-          path: MW3/app/build/outputs/apk/release/app-release.apk
+          path: app/build/outputs/apk/release/app-release.apk
