@@ -24,11 +24,29 @@ jobs:
           unzip -q /tmp/gradle.zip -d /opt
           echo "/opt/gradle-8.5/bin" >> $GITHUB_PATH
 
-      - name: Build Release APK
-        run: gradle assembleRelease
+      - name: Generate keystore
+        run: |
+          keytool -genkeypair -v \
+            -keystore MW3/keystore.jks \
+            -alias marketwidget \
+            -keyalg RSA \
+            -keysize 2048 \
+            -validity 10000 \
+            -storepass market123 \
+            -keypass market123 \
+            -dname "CN=MarketWidget, OU=App, O=Market, L=Moscow, S=Moscow, C=RU"
+
+      - name: Build Signed APK
+        run: |
+          cd MW3
+          gradle assembleRelease \
+            -Pandroid.injected.signing.store.file=$GITHUB_WORKSPACE/MW3/keystore.jks \
+            -Pandroid.injected.signing.store.password=market123 \
+            -Pandroid.injected.signing.key.alias=marketwidget \
+            -Pandroid.injected.signing.key.password=market123
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: MarketWidget-release
-          path: app/build/outputs/apk/release/app-release.apk
+          path: MW3/app/build/outputs/apk/release/app-release.apk
