@@ -26,6 +26,7 @@ jobs:
 
       - name: Generate keystore
         run: |
+          mkdir -p MW3
           keytool -genkeypair -v \
             -keystore MW3/keystore.jks \
             -alias marketwidget \
@@ -34,8 +35,7 @@ jobs:
             -validity 10000 \
             -storepass market123 \
             -keypass market123 \
-            -dname "CN=MarketWidget, OU=App, O=Market, L=Moscow, S=Moscow, C=RU"
-
+            -dname "CN=MarketWidget, OU=App, O=Market, L=Moscow, ST=Moscow, C=RU"
       - name: Build Signed APK
         run: |
           cd MW3
